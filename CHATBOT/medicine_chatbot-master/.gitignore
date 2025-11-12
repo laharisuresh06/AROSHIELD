@@ -1,0 +1,50 @@
+------------------------------------
+
+1. Node/Vite/React Dependencies and Build Outputs
+
+------------------------------------
+
+Node module folders (the huge dependency libraries)
+
+/node_modules
+
+Vite build output directory
+
+/dist
+
+Vite cache directory
+
+.vite/
+
+------------------------------------
+
+2. Python Virtual Environment and Cache
+
+------------------------------------
+
+Virtual environment directory (common names)
+
+/venv
+/env
+
+Python cache files
+
+pycache/
+*.pyc
+
+------------------------------------
+
+3. Development Environment Files and Secrets
+
+------------------------------------
+
+Local environment variables and secrets (NEVER COMMIT THESE)
+
+.env
+.env.local
+
+Editor settings and temporary files
+
+.vscode/
+.idea/
+*~

@@ -1,0 +1,218 @@
+<!-- START: Sign In / Sign Up Section (standalone) -->
+<section id="auth" class="container" aria-label="Authentication section" style="padding-top:2.5rem; padding-bottom:2.5rem;">
+	<section class="box special auth-card">
+		<header class="major" style="text-align:center;">
+			<h2 id="form-title">Sign In</h2>
+			<p id="form-subtext">Access your AroShield account to explore features and chat with AI.</p>
+		</header>
+
+		<!-- Toggle -->
+		<div class="form-toggle" role="tablist" aria-label="Sign in or Sign up">
+			<button id="toggle-signin" class="toggle-btn active" aria-controls="signin-form" role="tab">Sign In</button>
+			<span class="divider">|</span>
+			<button id="toggle-signup" class="toggle-btn" aria-controls="signup-form" role="tab">Sign Up</button>
+		</div>
+
+		<!-- Forms wrapper -->
+		<div class="forms-wrapper">
+
+			<!-- Sign In -->
+			<form id="signin-form" class="auth-form" method="post" action="#" aria-hidden="false">
+				<div class="field">
+					<label for="signin-username">Username</label>
+					<input type="text" id="signin-username" name="signin-username" placeholder="Your username" required>
+				</div>
+
+				<div class="field">
+					<label for="signin-email">Email ID</label>
+					<input type="email" id="signin-email" name="signin-email" placeholder="you@example.com" required>
+				</div>
+
+				<div class="field">
+					<label for="signin-password">Password</label>
+					<input type="password" id="signin-password" name="signin-password" placeholder="Password" required>
+				</div>
+
+				<div class="actions-row">
+					<button type="submit" class="button primary icon-left">
+						<span class="icon solid fa-arrow-left" aria-hidden="true"></span>
+						<span>Sign In</span>
+					</button>
+				</div>
+
+				<p class="note-small">Don't have an account? <a id="switch-to-signup" href="#">Sign up now</a>.</p>
+			</form>
+
+			<!-- Sign Up -->
+			<form id="signup-form" class="auth-form" method="post" action="#" style="display:none;" aria-hidden="true">
+				<div class="field">
+					<label for="signup-username">Username</label>
+					<input type="text" id="signup-username" name="signup-username" placeholder="Choose username" required>
+				</div>
+
+				<div class="field">
+					<label for="signup-email">Email ID</label>
+					<input type="email" id="signup-email" name="signup-email" placeholder="you@example.com" required>
+				</div>
+
+				<div class="field">
+					<label for="signup-password">Password</label>
+					<input type="password" id="signup-password" name="signup-password" placeholder="Create password" required>
+				</div>
+
+				<div class="actions-row">
+					<button type="submit" class="button primary icon-left">
+						<span class="icon solid fa-arrow-left" aria-hidden="true"></span>
+						<span>Register</span>
+					</button>
+				</div>
+
+				<p class="note-small">Already have an account? <a id="switch-to-signin" href="#">Sign in here</a>.</p>
+			</form>
+
+		</div>
+	</section>
+</section>
+
+<!-- Styles (insert in page head or a CSS file) -->
+<style>
+	/* Card */
+	.auth-card {
+		max-width: 780px;
+		margin: 0 auto;
+		border-radius: 14px;
+		padding: 2.2rem;
+		background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(250,250,252,0.95));
+		box-shadow: 0 12px 30px rgba(18,35,63,0.08), inset 0 1px 0 rgba(255,255,255,0.6);
+		border: 1px solid rgba(10,20,40,0.04);
+	}
+
+	/* Toggle */
+	.form-toggle { text-align:center; margin: 1rem 0 1.25rem; }
+	.toggle-btn {
+		background: transparent;
+		border: none;
+		font-weight:700;
+		font-size:1rem;
+		padding: .35rem .6rem;
+		cursor: pointer;
+		color: #5b6b85;
+	}
+	.toggle-btn.active { color: #0b76d1; text-decoration: underline; }
+
+	.divider { color: #cfd8e3; margin: 0 .6rem; }
+
+	/* Forms layout */
+	.forms-wrapper { display:flex; gap:2rem; flex-direction:column; align-items:stretch; }
+	.auth-form { width:100%; transition:opacity .22s ease; }
+	.field { margin-bottom:1rem; }
+	label { display:block; margin-bottom:.55rem; font-weight:600; color:#243146; }
+	input[type="text"], input[type="email"], input[type="password"] {
+		width:100%;
+		padding: .85rem .9rem;
+		border-radius:10px;
+		border:1px solid #e2e8f0;
+		box-shadow: none;
+		font-size:0.98rem;
+		background: linear-gradient(180deg,#fff,#fbfdff);
+		transition: box-shadow .15s ease, border-color .15s ease;
+	}
+	input:focus { outline:none; border-color:#8bbcf6; box-shadow:0 6px 18px rgba(11,118,209,0.08); }
+
+	/* Actions row and button with left arrow */
+	.actions-row { display:flex; justify-content:flex-start; margin-top: .6rem; }
+	.button.primary {
+		display:inline-flex;
+		align-items:center;
+		gap:.7rem;
+		padding:.65rem 1.1rem;
+		border-radius:10px;
+		background: linear-gradient(90deg,#0b76d1,#0066b3);
+		border:none;
+		color:#fff;
+		font-weight:700;
+		box-shadow: 0 8px 20px rgba(11,118,209,0.18), inset 0 -2px 0 rgba(255,255,255,0.06);
+		cursor:pointer;
+		font-size:0.98rem;
+	}
+	.button.primary:active { transform: translateY(1px); }
+	.button.primary .icon { font-size:0.95rem; opacity:0.98; }
+
+	.icon-left { padding-left:.45rem; } /* extra spacing is handled by gap on inner elements */
+
+	/* Subnote */
+	.note-small { text-align:left; margin-top:1rem; color:#515e72; font-size:0.95rem; }
+	.note-small a { text-decoration:underline; color:#0b76d1; font-weight:600; }
+
+	/* Responsive */
+	@media (max-width:720px) {
+		.auth-card { padding:1.2rem; border-radius:10px; }
+		.actions-row { justify-content:center; }
+		.note-small { text-align:center; }
+	}
+</style>
+
+<!-- Behavior (insert just before closing body tag) -->
+<script>
+	(function () {
+		// Elements
+		const signinForm = document.getElementById('signin-form');
+		const signupForm = document.getElementById('signup-form');
+		const toggleSignin = document.getElementById('toggle-signin');
+		const toggleSignup = document.getElementById('toggle-signup');
+		const toSignup = document.getElementById('switch-to-signup');
+		const toSignin = document.getElementById('switch-to-signin');
+		const formTitle = document.getElementById('form-title');
+		const formSub = document.getElementById('form-subtext');
+
+		function showSignIn() {
+			signinForm.style.display = 'block';
+			signinForm.setAttribute('aria-hidden','false');
+			signupForm.style.display = 'none';
+			signupForm.setAttribute('aria-hidden','true');
+			toggleSignin.classList.add('active');
+			toggleSignup.classList.remove('active');
+			formTitle.textContent = 'Sign In';
+			formSub.textContent = 'Access your AroShield account to explore features and chat with AI.';
+		}
+
+		function showSignUp() {
+			signinForm.style.display = 'none';
+			signinForm.setAttribute('aria-hidden','true');
+			signupForm.style.display = 'block';
+			signupForm.setAttribute('aria-hidden','false');
+			toggleSignup.classList.add('active');
+			toggleSignin.classList.remove('active');
+			formTitle.textContent = 'Sign Up';
+			formSub.textContent = 'Create your AroShield account to start exploring safe medication insights.';
+		}
+
+		// Event listeners
+		toggleSignin.addEventListener('click', showSignIn);
+		toggleSignup.addEventListener('click', showSignUp);
+		if (toSignup) toSignup.addEventListener('click', function (e) { e.preventDefault(); showSignUp(); });
+		if (toSignin) toSignin.addEventListener('click', function (e) { e.preventDefault(); showSignIn(); });
+
+		// Optional: open signup if ?mode=signup present
+		const params = new URLSearchParams(window.location.search);
+		if (params.get('mode') === 'signup') showSignUp();
+
+		// Add simple client-side validation + subtle animation on submit
+		document.querySelectorAll('.auth-form').forEach(form => {
+			form.addEventListener('submit', function (e) {
+				// basic HTML5 required fields handle most cases
+				// visual feedback: disable button briefly
+				const btn = form.querySelector('button[type="submit"]');
+				if (btn) {
+					btn.disabled = true;
+					btn.style.opacity = '0.85';
+					setTimeout(() => { btn.disabled = false; btn.style.opacity = ''; }, 900);
+				}
+				// Prevent default for demo; remove if wiring to server
+				e.preventDefault();
+				// Here you can call your API or do form.post
+			});
+		});
+	})();
+</script>
+<!-- END: Sign In / Sign Up Section -->

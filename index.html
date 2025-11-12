@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>AroShield</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			html {
+				scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+			}
+
+			/* Styling for the new visual section */
+			.visual-highlight {
+				background: linear-gradient(135deg, #edf3f8, #f7faff);
+				padding: 4rem 1.5rem;
+				text-align: center;
+				border-radius: 12px;
+				margin: 2rem 0;
+				box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+			}
+			.visual-title {
+				font-size: 1.8rem;
+				font-weight: 700;
+				color: #2b3d52;
+				margin-bottom: 0.5rem;
+			}
+			.visual-subtitle {
+				color: #63758a;
+				font-size: 1rem;
+				margin-bottom: 2rem;
+			}
+			.visual-grid {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 2rem;
+			}
+			.visual-item {
+				max-width: 260px;
+				text-align: center;
+			}
+			.visual-item h4 {
+				margin-top: 0.8rem;
+				font-size: 1.1rem;
+				font-weight: 600;
+				color: #0d3c61;
+			}
+			.visual-item p {
+				color: #56667d;
+				font-size: 0.95rem;
+			}
+			.icon.major {
+				font-size: 2.5rem;
+				margin-bottom: 0.5rem;
+			}
+			@media (max-width: 768px) {
+				.visual-grid {
+					flex-direction: column;
+					align-items: center;
+				}
+			}
+
+			/* Themed buttons under each feature */
+			.feature-button {
+				margin-top: 1.5rem;
+			}
+
+			.button-box {
+				display: inline-block;
+				border-radius: 8px;
+				padding: 0.8rem 1.6rem;
+				font-weight: 600;
+				font-size: 1rem;
+				color: #fff;
+				text-decoration: none;
+				box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+				transition: all 0.3s ease;
+			}
+
+			/* Left orange (accent2) button */
+			.button-orange {
+				background-color: #e89980;
+			}
+
+			.button-orange:hover {
+				background-color: #f0a892;
+				box-shadow: 0 10px 25px rgba(232, 153, 128, 0.4);
+				transform: translateY(-2px);
+			}
+
+			/* Right teal (accent3) button */
+			.button-teal {
+				background-color: #7fcdb8;
+			}
+
+			.button-teal:hover {
+				background-color: #9be0ca;
+				box-shadow: 0 10px 25px rgba(127, 205, 184, 0.4);
+				transform: translateY(-2px);
+			}
+
+			.arrow, .arrow-up {
+				font-weight: bold;
+				margin-left: 6px;
+			}
+
+			.features-row section {
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body class="landing is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<header id="header" class="alt">
+				<h1><a href="index.html">AroShield</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="#about">About Us</a></li>
+
+						<!-- ✅ Updated navigation links -->
+						<li><a href="CHATBOT/index.html">Chat With AI</a></li>
+						<li><a href="Aroshield_OCR/index.html">Know Your Medicine</a></li>
+
+						<li><a href="signin.html" class="button">Sign In / Sign Up</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<!-- Banner -->
+			<section id="banner">
+				<h2>AroShield</h2>
+				<p>Your smart assistant that helps you use medicines safely and avoid harmful drug interactions.</p>
+				<ul class="actions special">
+					<li><a href="signin.html" class="button primary">Sign In</a></li>
+				</ul>
+				<p style="margin-top:0.5rem; font-size:0.95rem;">
+					Don't have an account? <a href="signin.html" style="text-decoration: underline;">Sign up now</a>.
+				</p>
+			</section>
+
+			<!-- Main -->
+			<section id="main" class="container">
+
+				<section class="box special">
+					<header class="major">
+						<h2>"Your AI Companion for Safe and Smart Medication Decisions."
+						<br />
+						for doing stuff with your phone</h2>
+						<p>AroShield helps users ensure medication safety by instantly analyzing drug interactions, identifying potential side effects, and providing clear, reliable insights, all powered by intelligent AI.</p>
+					</header>
+
+					<!-- Visual Highlight Section -->
+					<section class="visual-highlight">
+						<div class="visual-content">
+							<h3 class="visual-title">How AroShield Keeps You Safe</h3>
+							<p class="visual-subtitle">Powered by AI • Backed by Science • Designed for You</p>
+							<div class="visual-grid">
+								<div class="visual-item">
+									<span class="icon solid major fa-stethoscope accent2"></span>
+									<h4>AI-Driven Drug Analysis</h4>
+									<p>Detects and explains harmful interactions using intelligent pattern recognition.</p>
+								</div>
+								<div class="visual-item">
+									<span class="icon solid major fa-capsules accent3"></span>
+									<h4>Medicine Insights</h4>
+									<p>Get detailed breakdowns of compositions, uses, and side effects instantly.</p>
+								</div>
+								<div class="visual-item">
+									<span class="icon solid major fa-robot accent4"></span>
+									<h4>Conversational AI</h4>
+									<p>Ask questions anytime — our chatbot gives quick, reliable answers about your medication.</p>
+								</div>
+							</div>
+						</div>
+					</section>
+				</section>
+
+				<!-- Features Section with Themed Buttons -->
+				<section class="box special features">
+					<div class="features-row">
+						<!-- Left Feature -->
+						<section>
+							<span class="icon solid major fa-bolt accent2"></span>
+							<h3>"Ask AroShield — Your AI Health Companion at Your Fingertips."</h3>
+							<p>Chat with AroShield’s intelligent assistant to instantly check drug safety, interactions, and dosage advice. Get clear, personalized answers about your medications in a simple, conversational way.</p>
+
+							<div class="feature-button">
+								<a href="CHATBOT/index.html" class="button-box button-orange">Chat with AI →</a>
+							</div>
+						</section>
+
+						<!-- Right Feature -->
+						<section>
+							<span class="icon solid major fa-chart-area accent3"></span>
+							<h3>"Snap. Upload. Discover What’s Inside Your Medicine."</h3>
+							<p>Upload an image of your medicine label or prescription, and AroShield will identify the drug, list its composition, and reveal possible side effects and interactions — all within seconds.</p>
+
+							<div class="feature-button">
+								<a href="Aroshield_OCR/index.html" class="button-box button-teal">Upload Image ↑</a>
+							</div>
+						</section>
+					</div>
+				</section>
+			</section>
+
+			<!-- About Us Section -->
+			<section id="about" class="container">
+				<section class="box special">
+					<header class="major">
+						<h2>About Us</h2>
+						<p style="max-width:800px;margin:auto;">
+							AroShield is an AI-powered platform designed to promote safe and informed medication use. 
+							By combining intelligent drug interaction analysis with real-time insights, AroShield helps users understand 
+							the composition, side effects, and compatibility of their medicines. Our mission is to simplify healthcare 
+							decision-making and empower individuals to use their medications safely through intuitive technology, 
+							image recognition, and conversational AI support.
+						</p>
+					</header>
+				</section>
+			</section>
+
+			<!-- Contact Us -->
+			<section id="cta">
+				<h2>Contact Us</h2>
+				<p>Have questions or want to collaborate? Send us a message and we'll get back to you.</p>
+				<form>
+					<div class="row gtr-50 gtr-uniform">
+						<div class="col-8 col-12-mobilep">
+							<input type="email" name="email" id="email" placeholder="Your Email Address" />
+						</div>
+						<div class="col-4 col-12-mobilep">
+							<input type="submit" value="Send Message" class="fit" />
+						</div>
+					</div>
+				</form>
+			</section>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+					<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+					<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; AroShield. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
